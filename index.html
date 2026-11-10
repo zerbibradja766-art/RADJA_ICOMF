@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radja | Online Store</title>
+    <link rel="icon" href="img/icon_.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/login-popup.css">
+</head>
+
+<body>
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </span>
+        </div>
+
+        <div class="items_in_cart" id="cart_items"></div>
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn">Checkout</a>
+
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">
+                    Shop More
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <header>
+
+        <div class="top_header">
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src="img/logo ZR.jpg" alt="RADJA Logo">
+                </a>
+
+                <form action="" class="search_box">
+
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="Electronics & Digita">For Sporty Women</option>
+                            <option value="Phones & Tablet">For Sporty Men</option>
+                            <option value="Fashion & Clothings">Energy Vitamins</option>
+                            <option value="Telivsion & Monitor">Sports Equipment</option>
+                            <option value="Jewelry & Watches">Sports Watches</option>
+                            <option value="Washing Machine">Sports Bags</option>
+                            <option value="Toys & Hobbies">Jewelry and Accessories</option>
+                        </select>
+                    </div>
+
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="count count_favourite">0</span>
+                        </a>
+                    </div>
+
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="count count_item_header">0</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+
+                    <div class="category_nav">
+
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+
+                        <div class="category_nav_list">
+                            <a href="#">Top 10 Offers</a>
+                            <a href="#">For Sporty Women and Men</a>
+                            <a href="#">Energy Vitamins</a>
+                            <a href="#">Sports Equipment</a>
+                            <a href="#">Sports Watches</a>
+                            <a href="#">Sports Bags</a>
+                            <a href="#">Jewelry and Accessories</a>
+                        </div>
+
+                    </div>
+
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </span>
+
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#accessories">accessories</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+                </nav>
+                <div class="login_signup btns">
+                    <button type="button" class="btn" id="openLogin">
+                        Login
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </button>
+
+                    <a href="signup.html" class="btn">
+                        Sign UP
+                        <i class="fa-solid fa-user-plus"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <div class="slider">
+        <div class="container">
+            <div class="slide-swp mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/banner_home1 (2).jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/banner_home2..png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="banner_2">
+                <a href="#">
+                    <img src="img/banner_home3..jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="banners_4">
+
+        <div class="container">
+
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+                <img src="img/banner3_1..png" alt="">
+
+                <div class="text">
+                    <h5>تخفيضات</h5>
+                    <h5>عالمية</h5>
+
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                    </div>
+
+                    <h6>اشترى الان</h6>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+                <img src="img/banner3_2..png" alt="">
+
+                <div class="text">
+                    <h5>تخفيضات</h5>
+                    <h5>عالمية</h5>
+
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                    </div>
+
+                    <h6>اشتري الان</h6>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+                <img src="img/banner3_3..png" alt="">
+
+                <div class="text">
+                    <h5>تخفيضات</h5>
+                    <h5>عالمية</h5>
+
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                    </div>
+
+                    <h6>اشتري الان</h6>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+                <img src="img/banner3_4..png" alt="">
+
+                <div class="text">
+                    <h5>تخفيضات</h5>
+                    <h5>عالمية</h5>
+
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                    </div>
+
+                    <h6>اشترى الان</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="slider_products slide">
+        <div class="container">
+            <div class="slide_product mySwiper">
+                <div class="top_slide">
+                    <h2><i class="fa-solid fa-tags"></i> Hot Deals</h2>
+                </div>
+                <div class="products swiper-wrapper" id="swiper_items_sale"></div>
+                <div class="swiper-button-next btn_Swip"></div>
+                <div class="swiper-button-prev btn_Swip"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="banners">
+        <div class="container">
+            <div class="banners_boxs banner_2_img">
+                <a href="#" class="box">
+                    <img src="img/banner_box4..png" alt="">
+                </a>
+                <a href="#" class="box">
+                    <img src="img/banner_box5..png" alt="">
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="slider_products slide" id="accessories">
+        <div class="container">
+            <div class="slide_product mySwiper">
+                <div class="top_slide">
+                    <h2>
+                        <i class="fa-solid fa-gem"></i>
+                        Accessories
+                    </h2>
+                </div>
+                <div class="products swiper-wrapper" id="swiper_accessories"></div>
+                <div class="swiper-button-next btn_Swip"></div>
+                <div class="swiper-button-prev btn_Swip"></div>
+            </div>
+        </div>
+    </div>
+    <div class="slider_products slide">
+        <div class="container">
+            <div class="slide_product mySwiper">
+                <div class="top_slide">
+                    <h2><i class="fa-solid fa-tags"></i> Sports</h2>
+                </div>
+                <div class="products swiper-wrapper" id="swiper_appliances"></div>
+                <div class="swiper-button-next btn_Swip"></div>
+                <div class="swiper-button-prev btn_Swip"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="banners">
+        <div class="container">
+            <div class="banners_boxs banner_3_img">
+                <a href="#" class="box">
+                    <img src="img/banner_box1.jpg" alt="">
+                </a>
+                <a href="#" class="box">
+                    <img src="img/banner_box2..jpg" alt="">
+                </a>
+                <a href="#" class="box">
+                    <img src="img/banner_box3..jpg" alt="">
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="slider_products slide">
+        <div class="container">
+            <div class="slide_product mySwiper">
+                <div class="top_slide">
+                    <h2><i class="fa-solid fa-tags"></i> equipement</h2>
+                </div>
+                <div class="products swiper-wrapper" id="swiper_mobiles"></div>
+                <div class="swiper-button-next btn_Swip"></div>
+                <div class="swiper-button-prev btn_Swip"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-column big_row">
+                    <img class="logo_footer" src="img/logo ZR.jpg" alt="RADJA Logo">
+                    <div class="icons_footer">
+                        <a href="tel:+213662727324" class="admin-phone" aria-label="Call Admin">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/?locale=fr_FR">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/coach_radja.fitness/?hl=fr">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://capradja.beprime.site/admin/dashboard">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Find It Fast</h4>
+                    <div class="links">
+                        <a href="#">
+                            <i class="fa-solid fa-caret-right"></i>
+                            for sporty women and men
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-caret-right"></i>
+                            sport equipement
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-caret-right"></i>
+                            sport watches
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-caret-right"></i>
+                            accessories
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-caret-right"></i>
+                            sports bags
+                        </a>
+
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <div class="links">
+                        <a href="support.html#account">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Your Account
+                        </a>
+
+                        <a href="support.html#returns">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Returns & Exchanges
+                        </a>
+
+                        <a href="support.html#shipping">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Shipping & Delivery
+                        </a>
+
+                        <a href="support.html#delivery-time">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Estimated Delivery Time
+                        </a>
+
+                        <a href="support.html#history">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Purchase History
+                        </a>
+
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Service us</h4>
+                    <div class="links">
+                        <a href="support.html">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Support Center
+                        </a>
+
+                        <a href="terms.html">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Term & Conditions
+                        </a>
+
+                        <a href="privacy.html">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Privacy Policy
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom_footer">
+                <p>
+                    &copy; <span>Radja Store.</span> All Rights Reserved.
+                </p>
+                <div class="payment_img">
+                    <img src="img/payment_method..png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <dialog id="loginPopup" class="radja-login-dialog">
+
+        <button type="button" id="closeLogin" class="login-close" aria-label="Close login">
+            &times;
+        </button>
+
+        <div class="login-title">
+            <h2>Welcome Back!</h2>
+            <p>Login to your account</p>
+        </div>
+
+        <form id="radjaLoginForm">
+
+            <label for="radjaEmail">Email Address</label>
+            <input type="email" id="radjaEmail" placeholder="Enter your email" autocomplete="username" required>
+
+            <input type="password" id="radjaPassword" placeholder="Enter your password" autocomplete="current-password"
+                required>
+            <div class="login-options">
+                <label class="remember-label">
+                    <input type="checkbox" id="radjaRemember">
+                    Remember me
+                </label>
+                <a href="#" id="radjaForgot">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-submit">
+                Login <a href="index1.html"></a>
+            </button>
+            <p class="login-register">
+                Don't have an account?
+                <a href="signup.html">Create Account</a>
+            </p>
+
+        </form>
+
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="JS - Copie/swiper.js"></script>
+    <script src="JS - Copie/items_home.js"></script>
+    <script src="JS - Copie/main.js"></script>
+    <script src="login-popup.js"></script>
+</body>
+
+</html>
